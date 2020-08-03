@@ -1,0 +1,45 @@
+Variáveis não precisam de tipos.
+
+todo arquivo usado para shell script tem a extensão .sh
+
+primeira linha sempre indicamos qual compilador vai ser usado, então sempre indicamos este caminho: 
+#!/usr/bin/env bash.
+não é indicado deixar #!/bin/bash, pois cada SO tem caminhos diferentes então utiliza-se o comando da linha acima pois ele vai pegar a váriavel de ambiente.
+Então dessa forma deixa o script portável.
+
+1 - Cria o arquivo com a extensão .sh
+2 - Da permissão de execução usando o comando: chmod +x nome_arquivo
+
+Váriaveis:
+  - Não precisa utilizar o cifrão para váriaveis.
+  - Fora das funções usa variável com nome maiusculo.
+  - Dentro das funções usa minusculo.
+  - Para realizar cálculos usa-se $(()) e dentro as váriaveis.
+  - Para comandos usa $()
+  - Quando for dar um echo na váriavel pode usar as aspas por volta
+
+Parâmetros:
+  - Usa $1 e assim sucessivamente, para pegar os parâmetros
+  - Pegar todos os parâmetros usados: $*
+  - Para contar os parâmetros: $#
+  - Para ver a saida do último comando usa: $? (0 Deu certo; 1 Deu Problema;)
+  - Para ver o PID usa $$
+  - $0 para pegar o nome do script
+
+Estrutura Condicionais:
+  If:
+    - Usa dois colchetes e dentro a condição, precisa ter espaço entre as duas
+
+  For: 
+    - Usa dois parênteses e dentro a condição
+    - Usa $(seq number) para representar os numeros que irão ser repetidos
+
+  While: 
+    - Para pegar o tamanho do array usa se a ${#Array[@]} e o "@" representa todos os elementos
+
+Cabeçalho: 
+  - Modelo no mod2 para ser utilizado
+
+Comentários: 
+  - Deve ser o mais objetivo possivel 
+  - É legal fazer em forma de pergunta e embaixo colocar a resposta
